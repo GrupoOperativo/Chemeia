@@ -3,11 +3,6 @@
     Created on : 23 may 2023, 14:26:27
     Author     : alumno
 --%>
-<<<<<<< HEAD
-=======
-
-
->>>>>>> bc75018bff0be1dbcacc79b04b0d0ea57b302aa8
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
