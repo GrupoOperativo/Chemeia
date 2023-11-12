@@ -3,8 +3,6 @@
     Created on : 23 may 2023, 14:26:27
     Author     : alumno
 --%>
-
-<%@page import="datos.conexion"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
