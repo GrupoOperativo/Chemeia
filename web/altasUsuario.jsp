@@ -35,8 +35,7 @@
         if (resultSet.next()) {
             out.print("<script> alert('El correo o usuario ya está en uso.');</script>");
             out.print("<script> window.location.href = 'registro.html'; </script>");
-
-             
+            
         } else {
             String insertQuery = "INSERT INTO usuarios(nomUsuario, contUsuario, correoUsuario) VALUES ('" + nombre + "','" + contra + "','" + correo + "')";
             sta.executeUpdate(insertQuery);
