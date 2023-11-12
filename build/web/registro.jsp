@@ -4,7 +4,7 @@
     Author     : alumno
 --%>
 
-<%@page import="datos.conexion"%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
