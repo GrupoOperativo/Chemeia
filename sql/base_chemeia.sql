@@ -7,6 +7,6 @@ CREATE TABLE IF NOT EXISTS `chemeia`.`usuarios` (
   nomUsuario VARCHAR(15) NOT NULL,
   contUsuario VARCHAR(20) NOT NULL,
   correoUsuario VARCHAR(50) NOT NULL,
-   admin INT(1),
+  admini INT(1),
   PRIMARY KEY (idUsuario),
   UNIQUE INDEX nomUsuario_UNIQUE (nomUsuario ASC) VISIBLE);
