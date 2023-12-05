@@ -1,0 +1,77 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 23 may 2023, 06:56:44
+    Author     : alumno
+*/
+body{
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color:white;
+                align-content: center;
+        }
+        
+        h1{
+            color: white;
+        }
+ a:link, a:visited {
+    color: black;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+}
+h1{
+    color: black;
+}
+
+a:hover, a:active {
+    color: gold;
+}        
+input{
+    border-radius: 10px;
+    
+}
+textArea{
+    border-radius: 10px;
+    
+}
+
+.tabla{
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    border-color: transparent ;
+    align-content: center;
+    /*background-color: #fff;*/
+    /*color:#000;*/
+    grid-area: tabla;
+    margin: auto;
+}
+table{
+    background-color: #fff;
+    color: #000000;
+    border-radius: 10px;
+}
+.botonC{
+  grid-area: boton;  
+  padding: 10px 20px;
+  background-color: #1c3a4d;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 3px solid;
+  border-color: transparent;
+  margin: auto;
+}
+.botonC:hover {
+    border-color: #000CFF;
+    transition: .5s;
+    margin: auto;
+}
+p{
+    font-size: 40px
+}

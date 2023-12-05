@@ -13,6 +13,6 @@
     }
     else {
         String msg = "Bienvenido " + sesion.getAttribute("usuario") + "!!";
-        response.sendRedirect("iniciado.jsp?e="+msg+"");
+        response.sendRedirect("chequeo.jsp?e="+msg+"");
     }
 %>
