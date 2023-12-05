@@ -1,5 +1,5 @@
 
-const API_KEY = "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";
+const API_KEY = "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";
 
 
 async function getCompletion(prompt) {
