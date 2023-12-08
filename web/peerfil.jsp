@@ -75,7 +75,7 @@
     <body data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="es">
         <section class="u-clearfix u-image u-section-1" id="sec-689a" data-image-width="1920" data-image-height="1200">
             <div class="u-clearfix u-sheet u-sheet-1">
-                <h2 class="u-align-center u-custom-font u-font-montserrat u-text u-text-palette-2-base u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Información de tu cuenta</h2>
+                <h2 class="u-align-center u-custom-font u-font-montserrat u-text u-text-palette-2-base u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Perfil</h2>
                 <div class="custom-expanded u-align-center u-border-11 u-border-no-left u-border-no-right u-border-no-top u-border-palette-2-base u-container-style u-custom-border u-grey-15 u-group u-shape-rectangle u-group-1" data-animation-name="customAnimationIn" data-animation-duration="1000">
                     <div class="u-container-layout u-container-layout-1">
                         <div class="login u-form u-login-control u-form-1">

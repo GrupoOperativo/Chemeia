@@ -1,8 +1,10 @@
 package datos;
 import static java.lang.System.out;
+import java.math.BigInteger;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Random;
 
 public class conexion {
     Connection cnx = null;

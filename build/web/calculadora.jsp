@@ -94,21 +94,18 @@
     <br>
 
     <div class="contenedor">
-        <input  placeholder="Introduce un compuesto" type="text" id="prompt"  autofocus="autofocus" >
+        <input  placeholder="Introduce un compuesto" type="text" id="prompt"  autofocus="autofocus" maxlength="30">
         <br><br>
         <button id="generate">Calcular</button>
 
         <p id="output"></p>
         
         <div class="periodic-table">
-            <!-- Fila 1 -->
 
             <div class="columna">
                 <button class="element-button" onclick="addElement('H')">H</button>
                 <button class="element-button right-align" onclick="addElement('He')">He</button>
             </div>
-
-            <!-- Fila 2 -->
             <div class="columna">
                 <button class="element-button" onclick="addElement('Li')">Li</button>
                 <button class="element-button" onclick="addElement('Be')">Be</button>
