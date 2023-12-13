@@ -17,11 +17,7 @@
         String nom = sesion.getAttribute("usuario").toString();
         conexion conecta = new conexion();  
         conn = conecta.conectar();
-<<<<<<< HEAD
         pstmt = conn.prepareStatement("Select admin from usuarios where nomUsuario = ?;");
-=======
-        pstmt = conn.prepareStatement("Select admini from usuarios where nomUsuario = ?;");
->>>>>>> c9c3dd8b698347f35df3ef37579e3454b04a4c10
         pstmt.setString(1, nom);
         res = pstmt.executeQuery();
         if (res.next()){    

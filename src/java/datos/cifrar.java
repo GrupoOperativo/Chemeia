@@ -20,11 +20,7 @@ public class cifrar {
     
     
     public String cifrado(String entrada){
-<<<<<<< HEAD
         
-=======
-       
->>>>>>> c9c3dd8b698347f35df3ef37579e3454b04a4c10
         String cadena1 = entrada;
         BigInteger cadena2;
         String cadeena2 = "";
