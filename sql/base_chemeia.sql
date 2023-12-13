@@ -7,11 +7,10 @@ CREATE TABLE IF NOT EXISTS `chemeia`.`usuarios` (
   nomUsuario VARCHAR(40) NOT NULL,
   contUsuario VARCHAR(200) NOT NULL,
   correoUsuario VARCHAR(200) NOT NULL,
-  admini INT(1),
+  admin INT(1),
   PRIMARY KEY (idUsuario),
   UNIQUE INDEX nomUsuario_UNIQUE (nomUsuario ASC) );
   USE chemeia;	
-  select * from usuarios;
   CREATE TABLE IF NOT EXISTS `chemeia`.`mensajes` (
 		idMensaje INT NOT NULL AUTO_INCREMENT,
 		idUsuario INT NOT NULL,
@@ -21,6 +20,15 @@ CREATE TABLE IF NOT EXISTS `chemeia`.`usuarios` (
         detalleMensaje VARCHAR(50),
 		fechaMensaje datetime,
 		primary key(idMensaje));
+        
+CREATE TABLE IF NOT EXISTS `chemeia`.`soporte` (
+		idSoporte INT NOT NULL AUTO_INCREMENT,
+        tipoSoli INT NOT NULL,
+		idEmisor INT(1) NOT NULL,
+        idReceptor INT(3),
+        solicitud VARCHAR(200),
+		primary key(idSoporte));
+
   CREATE TABLE IF NOT EXISTS `chemeia`.`juego` (
   idPregunta INT NOT NULL AUTO_INCREMENT,
   opc1 VARCHAR(50) ,
@@ -101,12 +109,25 @@ CREATE TABLE IF NOT EXISTS `chemeia`.`usuarios` (
   FOREIGN KEY (idUsuario) REFERENCES usuarios(idUsuario),
   FOREIGN KEY (nomUsuario) REFERENCES usuarios(nomUsuario)
 );
-
 INSERT INTO usuarios values(
 	null, 
-    "Dante",
+    "dantee",
     "111351135113511340|17",
-    "10226524343425730069359339931090|919",
+    "43135165035509906781448510|83",
     1);
-use chemeia;
-select * from usuarios;	
+    INSERT INTO usuarios values(
+	null, 
+    "tesfayo",
+    "111351135113511340|17",
+    "43135165035509906781448510|83",
+    1);
+    drop table soporte;
+select * from soporte;
+select * from usuarios;
+
+/*Para obtener el número total de respuestas correctas de un usuario (usuario 1)
+SELECT COUNT(*) as total_respuestas_correctas FROM puntajes WHERE idUsuario = 1 AND respuestaCorrecta = TRUE;*/
+  
+  
+  -- DROP DATABASE chemeia;
+  

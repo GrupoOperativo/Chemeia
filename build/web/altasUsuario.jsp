@@ -30,7 +30,7 @@
     Statement sta = null;
     try {
         Class.forName("com.mysql.cj.jdbc.Driver");
-        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/chemeia?autoReconnect=true&useSSL=false", "root", "n0m3l0");
+        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/chemeia?autoReconnect=true&useSSL=false", "root", "1234");
 
         sta = con.createStatement();
         String selectQuery = "SELECT * FROM usuarios WHERE correoUsuario = '" + correo + "' OR nomUsuario = '" + nombre + "'";
@@ -39,7 +39,7 @@
             String error = "Nombre de usuario o correo en uso.";
             response.sendRedirect("registro.jsp?e='" + error + "'");
             
-        } else {
+        } else {    
             String insertQuery = "INSERT INTO usuarios(nomUsuario, contUsuario, correoUsuario) VALUES ('" + nombre + "','" + contra + "','" + correo + "')";
             sta.executeUpdate(insertQuery);
             out.print("<script> mensaje();</script>");
