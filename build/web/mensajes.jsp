@@ -67,12 +67,17 @@
                                 <a class="nav-link" href="chequeo.jsp">Home</a>
                             </li>
                             <li class="nav-item">
+<<<<<<< HEAD
                                 <a class="nav-link" href="mensajes.jsp">Solicitudes</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="soporteUs.jsp">Mensajes</a>
                             </li>
                             
+=======
+                                <a class="nav-link" href="mensajes.jsp">Mensajes</a>
+                            </li>
+>>>>>>> c9c3dd8b698347f35df3ef37579e3454b04a4c10
                         </ul>
                     </div>
                     <div class="navbar align-self-center d-flex">

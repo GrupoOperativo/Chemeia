@@ -17,7 +17,11 @@ Author     : dante
 
     try {
         Class.forName("com.mysql.cj.jdbc.Driver");  
+<<<<<<< HEAD
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/chemeia?autoReconnect=true&useSSL=false", "root", "1234");
+=======
+        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/chemeia?autoReconnect=true&useSSL=false", "root", "n0m3l0");
+>>>>>>> c9c3dd8b698347f35df3ef37579e3454b04a4c10
         stmt = con.createStatement();
         registros = stmt.executeQuery("Select * from usuarios where nomUsuario = '" + user + "';");
         if (registros.next()) {

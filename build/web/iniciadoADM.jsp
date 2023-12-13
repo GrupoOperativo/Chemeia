@@ -113,18 +113,28 @@ Document   : inciado
                             <li class="nav-item">
                                 <a class="nav-link" href="chequeo.jsp">Home</a>
                             </li>
+<<<<<<< HEAD
                             <li class="nav-item">
                                 <a class="nav-link" href="mensajes.jsp">Solicitudes</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="soporteUs.jsp">Mensajes</a>
+=======
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="mensajes.jsp">Mensajes</a>
+>>>>>>> c9c3dd8b698347f35df3ef37579e3454b04a4c10
                             </li>
                         </ul>
                     </div>
 
                     <div class="navbar align-self-center d-flex">
 
+<<<<<<< HEAD
                         <a class="nav-icon position-relative text-decoration-none" href="logIn.jsp">
+=======
+                        <a class="nav-icon position-relative text-decoration-none" href="seguro.jsp">
+>>>>>>> c9c3dd8b698347f35df3ef37579e3454b04a4c10
                             <i class="fa fa-fw fa-user text-dark mr-3"></i>
                             <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
                         </a>
@@ -135,8 +145,12 @@ Document   : inciado
 
             <!--Acá empieza el centro-->
 
+<<<<<<< HEAD
         </nav>
         <div class="container-fluid p-0 pb-5">
+=======
+        </nav><div class="container-fluid p-0 pb-5">
+>>>>>>> c9c3dd8b698347f35df3ef37579e3454b04a4c10
             <div class="owl-carousel header-carousel position-relative">
                 <div class="owl-carousel-item position-relative">
                     <img class="img-fluid" src="img/quimica2.jpg" alt="">
@@ -144,8 +158,13 @@ Document   : inciado
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-12 col-lg-8 text-center">
+<<<<<<< HEAD
                                     <h1 class="display-3 text-white animated slideInDown mb-4">Cheme-IA</h1>
                                     <p class="fs-5 text-white mb-4 pb-2" style = "text-height: ">Busca proporcionar a estudiantes y profesionales de química inorgánica una herramienta útil y accesible para  desarrollar ecuaciones químicas, conversión de unidades, y otros aspectos fundamentales de la química inorgánica de manera rápida, precisa y eficiente. </p>
+=======
+                                    <h1 class="display-3 text-white animated slideInDown mb-4">Laboratorio de Tecnología & Desarrollo de Aplicaciones. </h1>
+                                    <p class="fs-5 text-white mb-4 pb-2">Desarrollar y proporcionar soluciones tecnológicas innovadoras y eficientes para satisfacer las necesidades de los clientes creando sofware de alta calidad que mejore la productividad y optimice procesos.</p>
+>>>>>>> c9c3dd8b698347f35df3ef37579e3454b04a4c10
                                 </div>
                             </div>
                         </div>
@@ -157,8 +176,13 @@ Document   : inciado
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-12 col-lg-8 text-center">
+<<<<<<< HEAD
                                     <h1 class="display-3 text-white animated slideInDown mb-4">TECNOLOGÍA Y DESARROLLO DE APLICACIONES</h1>
                                     <p class="fs-5 text-white mb-4 pb-2">TDA Labs (Empresa desarrolladora de Chemeia) busca generar y proporcionar soluciones tecnológicas innovadoras y eficientes para satisfacer las necesidades de los clientes creando sofware de alta calidad que mejore la productividad y optimice procesos.</p>
+=======
+                                    <h1 class="display-3 text-white animated slideInDown mb-4">Proyectos de TDA LABS</h1>
+                                    <a href="Chemeia/" class="fs-5 text-white mb-4 pb-2">Chemeia: Busca Proporcionar a estudiantes y profesionales de química inorgánica una herramienta útil y accesible para  desarrollar ecuaciones químicas, conversión de unidades, y otros aspectos fundamentales de la química inorgánica de manera rápida, precisa y eficiente. </a>    
+>>>>>>> c9c3dd8b698347f35df3ef37579e3454b04a4c10
                                 </div>
                             </div>
                         </div>
@@ -166,6 +190,13 @@ Document   : inciado
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
+=======
+        <!-- Carousel End -->
+
+
+        <!-- Facts Start -->
+>>>>>>> c9c3dd8b698347f35df3ef37579e3454b04a4c10
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="row g-4">
@@ -281,7 +312,11 @@ cuidadoso al tomar decisiones o al realizar algo.</pre>
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="team-item">
                             <div class="overflow-hidden position-relative">
+<<<<<<< HEAD
                                 <img class="img-fluid" src="img/danin.png" alt="">
+=======
+                                <img class="img-fluid" src="img/team2.jpg" alt="">
+>>>>>>> c9c3dd8b698347f35df3ef37579e3454b04a4c10
                                 <div class="team-social">
                                     <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i class="fab fa-twitter"></i></a>
@@ -300,7 +335,11 @@ cuidadoso al tomar decisiones o al realizar algo.</pre>
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="team-item">
                             <div class="overflow-hidden position-relative">
+<<<<<<< HEAD
                                 <img class="img-fluid" src="img/imgchemeia.png" alt="">
+=======
+                                <img class="img-fluid" src="img/team2.jpg" alt="">
+>>>>>>> c9c3dd8b698347f35df3ef37579e3454b04a4c10
                                 <div class="team-social">
                                     <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i class="fab fa-twitter"></i></a>
@@ -368,7 +407,11 @@ fomentar la integridad en el desarrollo.</pre>
                     </div>
                     <div class="col-lg-6 pe-lg-0" style="min-height: 400px;">
                         <div class="position-relative h-100">
+<<<<<<< HEAD
                             <img class="position-absoluteimg-fluid w-100 h-100" src="img/abajo2.jpg" style="object-fit: cover;" alt="">
+=======
+                            <img class="position-absoluteimg-fluid w-100 h-100" src="img/quimica5.png" style="object-fit: cover;" alt="">
+>>>>>>> c9c3dd8b698347f35df3ef37579e3454b04a4c10
                         </div>
                     </div>
                 </div>
@@ -454,4 +497,9 @@ fomentar la integridad en el desarrollo.</pre>
         <script src="assets/js/main.js"></script>
     </body>
 
+<<<<<<< HEAD
 </html>
+=======
+</html>
+        
+>>>>>>> c9c3dd8b698347f35df3ef37579e3454b04a4c10
