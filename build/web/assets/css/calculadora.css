@@ -1,0 +1,75 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 23 nov 2023, 19:09:36
+    Author     : dante
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.periodic-table {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.columna {
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+}
+img {
+    max-width: 200px;
+    max-height: 140px;
+    margin: auto;
+}
+.element-button {
+    flex-basis: calc(100% / 18 - 15px);
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    background-color: #f2f2f2; /* Gris claro */
+    color: #333; /* Color de texto oscuro */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    order: 1; /* Orden predeterminado */
+}
+
+.right-align {
+    margin-left: auto;
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
+.element-button:hover {
+    background-color: #d9d9d9; /* Gris claro más oscuro al pasar el ratón */
+}
+
+#elementTextBox {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+#prompt {
+        height: 40px; /* Ajusta la altura según tus preferencias */
+        font-size: 16px; /* Ajusta el tamaño de la fuente según tus preferencias */
+        width: 600px; /* Ancho inicial, ajusta según tus necesidades */
+        padding: 8px; /* Añade relleno interno para un aspecto más espaciado */
+    }

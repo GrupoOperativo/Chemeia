@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Chemeia</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="assets/img/chemeia.png">
+        <link rel="icon" href="assets/img/chemeiaP.png" type="image/png">
+
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/templatemo.css">
+        <link rel="stylesheet" href="assets/css/custom.css">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+        <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+        <style>
+            section {
+                background-color: #f8f9fa;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                margin: 0;
+                opacity: 0;
+                transition: opacity 0.9s ease-in-out;
+            }
+
+            .quiz-text {
+                text-align: center;
+                margin-bottom: 20px;
+                color: #495057;
+            }
+
+
+            h2, h3 {
+                color: #28a745;
+            }
+
+            p {
+                color: #6c757d;
+            }
+
+            ul {
+                color: #495057;
+            }
+
+            .btn-success {
+                background-color: #28a745;
+                border-color: #28a745;
+                color: #ffffff;
+                transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+            }
+
+            .btn-success:hover {
+                background-color: #218838;
+                border-color: #1e7e34;
+                color: #ffffff;
+                opacity: 0.8;
+                transform: scale(1.2); /* Ajusta el factor de escala según tus preferencias */
+            }
+            section:nth-child(2) {
+                margin-top: 0;
+            }
+
+            section.visible {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            section.zoom-out {
+                transform: scale(1.4);
+            }
+
+
+            body::before {
+                content: "";
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(255, 255, 255, 0); /* Color inicial transparente */
+                pointer-events: none; /* Permite que los eventos del mouse pasen a través de este elemento */
+                transition: background 0.5s ease-in-out; /* Duración y función de transición */
+            }
+
+            body:hover::before {
+                background: rgba(255, 255, 255, 0.2); /* Color y opacidad al pasar el mouse */
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
+            <div class="container text-light">
+                <div class="w-100 d-flex justify-content-between">
+                    <div>
+                        <i class="fa fa-envelope mx-2"></i>
+                        <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:info@company.com">tdagrupooperativo@gmail.com</a>
+                        <i class="fa fa-phone mx-2"></i>
+                        <a class="navbar-sm-brand text-light text-decoration-none" href="tel:5616599212">5616599212</a>
+                    </div>
+                    <div>
+                        <a class="text-light" href="https://www.instagram.com/tda_labs/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==" target="_blank"><i class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar-light shadow">
+            <div class="container d-flex justify-content-between align-items-center">
+
+                <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+                    Chemeia
+                </a>
+
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                    <div class="flex-fill">
+                        <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="chequeo.jsp">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="calculadora.jsp">Calculadora</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="info.jsp">Información</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="juego.jsp">Juego</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="chatbot.html">ChatBot</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navbar align-self-center d-flex">
+
+                        <a class="nav-icon position-relative text-decoration-none" href="seguro.jsp">
+                            <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                            <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+        <section class="container mt-5">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="text-center mb-4">Bienvenido a Chemeia</h2>
+                    <p>
+                        Chemeia es tu portal dedicado a la química, la ciencia que estudia la composición, estructura, propiedades y cambios de la materia.
+                    </p>
+                    <p>
+                        La química es una disciplina fascinante que se centra en entender cómo interactúan los átomos y las moléculas para formar sustancias nuevas. Aquí encontrarás información valiosa sobre diversos aspectos de la química.
+                    </p>
+                    <h3 class="mt-4">¿Qué es la Química?</h3>
+                    <p>
+                        La química es la ciencia que busca comprender la naturaleza de la materia y los cambios que experimenta. Explora desde las partículas fundamentales hasta las complejas reacciones químicas que ocurren en nuestro entorno.
+                    </p>
+                    <h3 class="mt-4">Historia de la Química</h3>
+                    <p>
+                        A lo largo de la historia, la química ha evolucionado desde las antiguas alquimias hasta convertirse en una ciencia rigurosa. Descubre los hitos importantes que han marcado su desarrollo.
+                    </p>
+                    <h3 class="mt-4">Importancia de la Química</h3>
+                    <p>
+                        La química desempeña un papel crucial en nuestra vida cotidiana, desde la medicina y la agricultura hasta la tecnología. Explora cómo esta ciencia impacta nuestro mundo.
+                    </p>
+                    <h3 class="mt-4">Áreas de la Química</h3>
+                    <p>
+                        La química se divide en diversas ramas, como la química orgánica, inorgánica, analítica y física. Cada una de estas áreas se centra en aspectos específicos de la materia y las reacciones químicas.
+                    </p>
+                    <h3 class="mt-4">Experimentación Química</h3>
+                    <p>
+                        La experimentación es fundamental en química. Los científicos llevan a cabo experimentos para entender las propiedades de las sustancias y desarrollar nuevos materiales y medicamentos.
+                    </p>
+                    <h3 class="mt-4">Avances Recientes</h3>
+                    <p>
+                        Descubre los avances más recientes en el campo de la química, desde nuevas tecnologías hasta descubrimientos que están transformando la manera en que entendemos la materia.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Descubrimiento del Mundo de la Química -->
+        <section class="container mt-5">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="text-center mb-4">Descubre el Fascinante Mundo de la Química</h2>
+                    <p>
+                        Chemeia es tu ventana al emocionante universo de la química, una ciencia que desentraña los misterios de la materia y las interacciones a nivel atómico.
+                    </p>
+                    <p>
+                        La química nos rodea en cada aspecto de la vida cotidiana, desde la composición del aire que respiramos hasta los productos que utilizamos diariamente. ¡Acompáñanos en este viaje educativo!
+                    </p>
+                    <h3 class="mt-4">¿Qué Puedes Encontrar en Chemeia?</h3>
+                    <ul>
+                        <li>Explora la historia fascinante de la química, desde las alquimias antiguas hasta los desarrollos científicos modernos.</li>
+                        <li>Descubre la importancia de la química en la medicina, la industria y la tecnología.</li>
+                        <li>Aprende sobre las diferentes ramas de la química y cómo contribuyen al conocimiento científico.</li>
+                        <li>Sumérgete en emocionantes experimentos químicos que puedes realizar en casa o en el laboratorio.</li>
+                        <li>Mantente actualizado con los últimos avances y descubrimientos en el mundo de la química.</li>
+                    </ul>
+                    <h3 class="mt-4">¿Por Qué la Química es Importante?</h3>
+                    <p>
+                        La química es la ciencia central que conecta las otras disciplinas. Desde el desarrollo de nuevos medicamentos hasta la creación de materiales innovadores, la química impulsa el progreso y mejora nuestras vidas de innumerables maneras.
+                    </p>
+                    <h3 class="mt-4">¡Únete a Nuestra Comunidad!</h3>
+                    <p>
+                        En Chemeia, no solo exploramos la química, sino que también construimos una comunidad apasionada por la ciencia. Únete a nosotros en redes sociales para estar al tanto de eventos, discusiones y más.
+                    </p>
+                    <div class="quiz-text">
+                        ¿Listo para poner a prueba tus conocimientos en nuestro quiz de química?
+                    </div>
+                    <div class="text-center mt-4">
+                        <a href="juego.jsp" class="btn btn-success">Explora más</a>
+                    </div>
+                </div>
+            </div>
+        </section> 
+        <footer class="bg-dark" id="tempaltemo_footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-4 pt-5">
+                        <h2 class="h2 text-success border-bottom pb-3 border-light logo">Chemeia</h2>
+                        <ul class="list-unstyled text-light footer-link-list">
+                            <li>
+                                <i class="fas fa-map-marker-alt fa-fw"></i>
+                                Mar Mediterráneo 236-230, Nextitla, Miguel Hidalgo, 11420 Ciudad de México, CDMX
+                            </li>
+                            <li>
+                                <i class="fa fa-phone fa-fw"></i>
+                                <a class="text-decoration-none">561 6599 212</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope fa-fw"></i>
+                                <a class="text-decoration-none" href="mailto:tdagrupooperativo@gmail.com">tdagrupooperativo@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+                </div>
+
+                <div class="row text-light mb-4">
+                    <div class="col-12 mb-3">
+                        <div class="w-100 my-3 border-top border-light"></div>
+                    </div>
+                    <div class="col-auto me-auto">
+                        <ul class="list-inline text-left footer-icons">
+                            <li class="list-inline-item border border-light rounded-circle text-center">
+                                <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/tda_labs/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA=="><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="w-100 bg-black py-3">
+                <div class="container">
+                    <div class="row pt-2">
+                        <div class="col-12">
+                            <p class="text-left text-light">
+                                Copyright &copy; 2023 TDA Labs
+                                | Diseñado por <a rel="sponsored" href="http://tdalabs.gerdoc.com/" target="_blank">Grupo Operativo</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <script src="assets/js/jquery-1.11.0.min.js"></script>
+        <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/templatemo.js"></script>
+        <script src="assets/js/custom.js"></script><script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const sections = document.querySelectorAll("section");
+
+                sections.forEach((section) => {
+                    section.classList.add("visible");
+                    section.addEventListener("transitionend", function () {
+                        section.classList.remove("zoom-out");
+                    });
+                });
+            });
+            document.addEventListener("DOMContentLoaded", function () {
+                const icons = document.querySelectorAll("[class^='bi-'], [class*=' bi-']");
+
+                icons.forEach((icon) => {
+                    icon.addEventListener("mouseover", function () {
+                        this.style.boxShadow = "0 0 10px rgba(255, 255, 255, 0.8)";
+                    });
+
+                    icon.addEventListener("mouseout", function () {
+                        this.style.boxShadow = "none";
+                    });
+                });
+            });
+        </script>
+    </body>
+
+</html>

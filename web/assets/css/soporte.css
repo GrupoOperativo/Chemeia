@@ -1,0 +1,64 @@
+/* Estilos para el contenedor del chat y el input */
+#chat-container {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 60%;
+}
+.input-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos para el input */
+#messageInput {
+    flex: 1;
+    padding: 10px; /* Ajusta el tamaño del padding según tus preferencias */
+    font-size: 16px; /* Ajusta el tamaño de la fuente según tus preferencias */
+}
+
+/* Estilos para el botón */
+#sendButton {
+    padding: 10px;
+    background-color: #59ab6e;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#sendButton:hover {
+    background-color: #4c8d5c;
+}
+
+/* Estilos para el texto editable */
+.text-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.text-container input {
+    font-size: 14px; /* Ajusta el tamaño de la fuente según tus preferencias */
+    color: #333333;
+    border: 1px solid #ccc; /* Añade un borde al input */
+    border-radius: 4px;
+    padding: 5px; /* Ajusta el tamaño del padding según tus preferencias */
+    width: 80%; /* Ajusta el ancho del input según tus preferencias */
+}
+
+.text-container button {
+    margin-top: 5px;
+    padding: 8px;
+    background-color: #59ab6e;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.text-container button:hover {
+    background-color: #4c8d5c;
+}

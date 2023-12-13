@@ -7,14 +7,6 @@ body{
     background-attachment: fixed;
 }
 
-
-.cabecera {
-    color: white;
-    font-family: Arial;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
 .username .icono-ojo {
   position: absolute;
   top: 50%;
@@ -24,7 +16,7 @@ body{
 }
 .formulario {
     position: absolute;
-    top: 50%;
+    top: 62%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 400px;
@@ -155,7 +147,7 @@ input[type="submit"]:hover {
     .formulario {
         width: 60%;
         left: 50%;
-        top: 50%;
+        top: 62%;
         transform: translate(-50%, -50%);
     }
     
