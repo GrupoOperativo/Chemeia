@@ -16,7 +16,7 @@
             response.sendRedirect("logIn.jsp?e=" + e + "");
         }
         else{
-        out.println("1");
+        
             String nombre = sesion.getAttribute("usuario").toString();
             String nom = "";
             Connection conn = null;
@@ -30,7 +30,7 @@
             pstmt.setString(1, nombre);
             res = pstmt.executeQuery();
             if (res.next()) {
-                out.println("1");
+               
                 nom = res.getString("nomUsuario");   
                 administra = res.getInt("admin");
                 id = res.getInt("idUsuario");
@@ -263,7 +263,8 @@
     %>
 
     <script>
-        button.onclick = function () {
+        
+    if(button){button.onclick = function () {
             var resp;
             const botonesExtract = document.getElementsByClassName('extractButton');
             for (let i = 0; i < botonesExtract.length; i++) {
@@ -283,7 +284,7 @@
                     tipo = 0;
                 });
             }
-        };</script>
+        }};</script>
     <script>
         const socket = new WebSocket(`ws://localhost:3000`);
         const admin = "<%=administra%>";
@@ -334,7 +335,30 @@
                     extra = "";
                     chat.appendChild(messageContainer);
                     messageContainer.appendChild(button);
+                         button.onclick = function () {
+            var resp;
+            const botonesExtract = document.getElementsByClassName('extractButton');
+            for (let i = 0; i < botonesExtract.length; i++) {
+                const boton = botonesExtract[i];
+                boton.addEventListener('click', function () {
+                    const contenidoBoton = boton.textContent.split(':')[1].trim();
+                    conta++;
+                    editableText.value = "Responder a: " + contenidoBoton;
+                    extra = contenidoBoton.toString();
+                    tipo = 0;
+                    if (conta === 2) {
+                        editableText.value = "Responder a: Administradores";
+                        extra = "";
+                        conta = 0;
+                    }
+                    console.log('Responder a: ', contenidoBoton);
+                    tipo = 0;
+                });
+            }
+        };
                 }
+                
+           
                 chat.appendChild(messageContainer);
             } else if (nombre === nombree) {
                 tipo = 0;
