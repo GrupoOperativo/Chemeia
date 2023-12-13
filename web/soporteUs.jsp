@@ -3,10 +3,8 @@
     Created on : 10 dic 2023, 14:51:00
     Author     : dante
 --%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="java.io.*,java.util.*"%>
-<%@ page import="javax.servlet.*"%>
-<%@ page import="javax.servlet.http.*"%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.sql.*,datos.conexion"%>
 <head>
     <%
@@ -16,13 +14,10 @@
             response.sendRedirect("logIn.jsp?e=" + e + "");
         }
         else{
-        
             String nombre = sesion.getAttribute("usuario").toString();
-            String nom = "";
             Connection conn = null;
             ResultSet res = null;
             int administra = 0;
-            int id = 0;
             PreparedStatement pstmt = null;
             conexion conecta = new conexion();
             conn = conecta.conectar();
@@ -30,11 +25,10 @@
             pstmt.setString(1, nombre);
             res = pstmt.executeQuery();
             if (res.next()) {
-               
-                nom = res.getString("nomUsuario");   
+                String nom = res.getString("nomUsuario");   
                 administra = res.getInt("admin");
-                id = res.getInt("idUsuario");
-                
+        
+        
     %>
 
 
@@ -138,161 +132,18 @@
         </div>
         <%if(administra == 1){%>
         <div class="text-container">
-
             <input type="text" id="editableText" value="Responderás a: Todos" readonly>
         </div><%}%>
     </div>
 
-    <%%>
-    <script>
-        var button;
-        var conta = 0;
-        const chat = document.getElementById('chat');
-        const nombree = "<%=nom%>";
-    </script> 
-    <%      
-            if(administra == 1){
-                out.println("2");
-                ResultSet ress = null;
-                PreparedStatement pstmt0 = null;
-                ResultSet res1 = null;
-                ResultSet res2 = null;
-                pstmt0 = conn.prepareStatement("select * from soporte");
-                ress = pstmt0.executeQuery();
-                while (ress.next()) {
-                
-                int idE = ress.getInt("idEmisor");
-                int idR = ress.getInt("idReceptor");
-                String cont = ress.getString("solicitud");
-
-                PreparedStatement pstmt2 = null;
-                PreparedStatement pstmt3 = null;
-               
-                pstmt2 = conn.prepareStatement("select * from usuarios where idUsuario = ?");
-                pstmt2.setInt(1,idE);
-                res1 = pstmt2.executeQuery();
-                if(res1.next()){
-                String nomE = res1.getString("nomUsuario");
-      
-                pstmt3 = conn.prepareStatement("select * from usuarios where idUsuario = ?");
-                pstmt3.setInt(1,idR);
-                res2 = pstmt3.executeQuery();
-                if(res1.next()){
-                    String nomR = res2.getString("nomUsuario");}
-                    else{ 
-                    String nomR = "";}
-
-    %>
-
-    <script>
-
-        var messageContainer = document.createElement('div');
-        var nomR = "";
-        var nomE = "<%=nomE%>";
-        var cont = "<%=cont%>";
-        console.log(nomR);
-        console.log(nomE);
-        console.log(cont);
-        if (nombree === nomE)
-            messageContainer.textContent = "Yo: " + cont;
-        else {
-            messageContainer.textContent = nomE + ": " + cont;
-            button = document.createElement('button');
-            button.textContent = 'Responder a: ' + nomE;
-            button.classList.add('extractButton');
-            chat.appendChild(messageContainer);
-            messageContainer.appendChild(button);
-        }
-
-        chat.appendChild(messageContainer);
-    </script>
-    <%       
-       }} }
-        else{
-                PreparedStatement pstmt1 = null;
-                ResultSet resss = null;
-                PreparedStatement pstmt0 = null;
-                pstmt1 = conn.prepareStatement("select * from soporte");
-                resss = pstmt1.executeQuery();
-                while (resss.next()) {
-                ResultSet res1 = null;
-                ResultSet res2 = null;
-                int idE = resss.getInt("idEmisor");
-                int idR = resss.getInt("idReceptor");
-                String cont = resss.getString("solicitud");
-
-                PreparedStatement pstmt2 = null;
-                PreparedStatement pstmt3 = null;
-
-                pstmt2 = conn.prepareStatement("select * from usuarios where idUsuario = ?");
-                pstmt2.setInt(1,idE);
-                res1 = pstmt2.executeQuery();
-                if(res1.next()){
-                String nomE = res1.getString("nomUsuario");
-                pstmt3 = conn.prepareStatement("select * from usuarios where idUsuario = ?");
-                pstmt3.setInt(1,idR);
-                res2 = pstmt3.executeQuery();
-                if(res2.next()){
-                String nomR = res2.getString("nomUsuario");
-                
-    %>
-    <script>
-        var nomR = "<%=nomR%>";
-    </script><%}else{%><script>
-        var nomR = "";
-    </script><%}%>
-    <script>
-        
-        var nomE = "<%=nomE%>";
-        var cont = "<%=cont%>";
-        console.log("FUNCIONA PERO NO");
-        if (nombree === nomE) {
-            const messageContainerr = document.createElement('div');
-            messageContainerr.textContent = "Yo: " + cont;
-            chat.appendChild(messageContainerr);
-            console.log("funciona");
-        } else if (nomR === nombree) {
-            const messageContainerr = document.createElement('div');
-            messageContainerr.textContent = "ADMIN: " + cont;
-            chat.appendChild(messageContainerr);
-            console.log("funciona admin");
-        }
-    </script>
-    <%       
-       } }}}
-    %>
-
-    <script>
-        
-    if(button){button.onclick = function () {
-            var resp;
-            const botonesExtract = document.getElementsByClassName('extractButton');
-            for (let i = 0; i < botonesExtract.length; i++) {
-                const boton = botonesExtract[i];
-                boton.addEventListener('click', function () {
-                    const contenidoBoton = boton.textContent.split(':')[1].trim();
-                    conta++;
-                    editableText.value = "Responder a: " + contenidoBoton;
-                    extra = contenidoBoton.toString();
-                    tipo = 0;
-                    if (conta === 2) {
-                        editableText.value = "Responder a: Administradores";
-                        extra = "";
-                        conta = 0;
-                    }
-                    console.log('Responder a: ', contenidoBoton);
-                    tipo = 0;
-                });
-            }
-        }};</script>
     <script>
         const socket = new WebSocket(`ws://localhost:3000`);
+        const nombree = "<%=nom%>";
         const admin = "<%=administra%>";
-        const id = "<%=id%>";
-        var extra = "";
-        var tipo = 0;
+        var extra;
 
-        <%}%>
+        <%}}%>
+//sesion.getAttribute("usuario")
         socket.onmessage = (event) => {
             const chat = document.getElementById('chat');
             const messageData = String(event.data);
@@ -304,8 +155,7 @@
             const nomm = (partes[1].trim()).split(',');
             const nombre = quitarCaracteresEspeciales(nomm[0]);
             extra = "";
-            tipo = 1;
-
+            var  conta = 0;
 
             function quitarCaracteresEspeciales(cadena) {
                 return cadena.replace(/['"{}]/g, '');
@@ -320,55 +170,53 @@
             }
             console.log(admini);
             if (admin === "1") {
-                tipo = 1;
                 const editableText = document.getElementById('editableText');
                 editableText.value = "Responder a: " + "Administradores";
                 const messageContainer = document.createElement('div');
                 if (nombre === nombree)
                     messageContainer.textContent = "Yo: " + contenido;
                 else {
-                    tipo = 1;
                     messageContainer.textContent = nombre + ": " + contenido;
-                    button = document.createElement('button');
+                    const button = document.createElement('button');
                     button.textContent = 'Responder a: ' + nombre;
                     button.classList.add('extractButton');
-                    extra = "";
+                    button.onclick = function () {
+                        var resp;
+                        const botonesExtract = document.getElementsByClassName('extractButton');
+                        for (let i = 0; i < botonesExtract.length; i++) {
+                            const boton = botonesExtract[i];
+
+                            // Agrega un manejador de clic a cada botón
+                            boton.addEventListener('click', function () {
+                                // Obtiene el contenido después de ":" del botón actual
+                                const contenidoBoton = boton.textContent.split(':')[1].trim();
+                                conta ++;
+                               
+                                // Modifica el valor del input con el contenido obtenido
+                                editableText.value = "Responder a: " + contenidoBoton;
+                                extra = contenidoBoton.toString();
+                                if (conta === 2){
+                                    editableText.value = "Responder a: Administradores";
+                                    extra = "";
+                                    conta = 0;
+                                }
+                                // Puedes realizar acciones adicionales con el contenido del botón aquí
+                                // Por ejemplo, si deseas enviar el contenido a algún otro lugar, llamar a funciones, etc.
+                                console.log('Responder a: ', contenidoBoton);
+                            });
+                        }
+                    };
                     chat.appendChild(messageContainer);
                     messageContainer.appendChild(button);
-                         button.onclick = function () {
-            var resp;
-            const botonesExtract = document.getElementsByClassName('extractButton');
-            for (let i = 0; i < botonesExtract.length; i++) {
-                const boton = botonesExtract[i];
-                boton.addEventListener('click', function () {
-                    const contenidoBoton = boton.textContent.split(':')[1].trim();
-                    conta++;
-                    editableText.value = "Responder a: " + contenidoBoton;
-                    extra = contenidoBoton.toString();
-                    tipo = 0;
-                    if (conta === 2) {
-                        editableText.value = "Responder a: Administradores";
-                        extra = "";
-                        conta = 0;
-                    }
-                    console.log('Responder a: ', contenidoBoton);
-                    tipo = 0;
-                });
-            }
-        };
                 }
-                
-           
                 chat.appendChild(messageContainer);
             } else if (nombre === nombree) {
-                tipo = 0;
                 extra = "";
                 const messageContainer = document.createElement('div');
                 messageContainer.textContent = "Yo: " + contenido;
                 chat.appendChild(messageContainer);
                 console.log("funciona");
             } else if (admini.split('/')[0] === "1" && admini.split('/')[1] === nombree) {
-                tipo = 0;
                 extra = "";
                 const messageContainer = document.createElement('div');
 
@@ -391,21 +239,6 @@
                 socket.send(JSON.stringify(messageData));
                 input.value = '';
             }
-            if (tipo === null)
-                var tipoe = 1;
-            else
-                var tipoe = tipo;
-            var nomR = extra;
-            var cont = message;
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function () {
-                if (this.readyState === 4 && this.status === 200) {
-                    console.log(this.responseText);
-                }
-            }
-            ;
-            xhttp.open("GET", "subida.jsp?tipo=" + tipoe + "&nomE=" + id + "&nomR=" + nomR + "&cont=" + cont, true);
-            xhttp.send();
         }
 
 
