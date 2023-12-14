@@ -37,7 +37,7 @@ wss.on('connection', (ws) => {
     });
 });
 
-const PORT = process.env.PORT || 3007;
+const PORT = process.env.PORT || 3008;
 server.listen(PORT, () => {
     console.log(`Servidor escuchando en server_de_gerdoc:${PORT}`);
 });
