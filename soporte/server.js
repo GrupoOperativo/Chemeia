@@ -37,7 +37,7 @@ wss.on('connection', (ws) => {
     });
 });
 
-const PORT = process.env.PORT || 6000;
+const PORT = process.env.PORT || 3001;
 server.listen(PORT, () => {
     console.log(`Servidor escuchando en http://localhost:${PORT}`);
 });
