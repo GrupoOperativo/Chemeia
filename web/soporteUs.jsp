@@ -286,7 +286,7 @@
             }
         }};</script>
     <script>
-        const socket = new WebSocket(`ws://localhost:3001`);
+        const socket = new WebSocket(`ws://tdalabs.gerdoc.com:3001`);
         const admin = "<%=administra%>";
         const id = "<%=id%>";
         var extra = "";
